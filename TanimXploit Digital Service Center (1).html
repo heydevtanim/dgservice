@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TanimXploit Digital Service Center</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2f0;--sf:#fff;--tx:#13261e;--mu:#566a60;--g:#006a4e;--on:#fff;--gs:#d9eee6;--r:#e0283e;--bd:#d3ddd8;--wn:#fff1cc;--wt:#5c4300;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1714;--sf:#16221d;--tx:#e6f0eb;--mu:#9bb0a5;--g:#3fc79a;--on:#08150f;--gs:#173a2e;--r:#ff5c70;--bd:#2a3b34;--wn:#3a2f10;--wt:#f2d98a}}
+:root[data-theme="dark"]{--bg:#0e1714;--sf:#16221d;--tx:#e6f0eb;--mu:#9bb0a5;--g:#3fc79a;--on:#08150f;--gs:#173a2e;--r:#ff5c70;--bd:#2a3b34;--wn:#3a2f10;--wt:#f2d98a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 "Hind Siliguri","Noto Sans Bengali",Kalpurush,system-ui,sans-serif}
+header{background:var(--g);color:var(--on);padding:20px 0 18px}
+.w{max-width:1100px;margin:0 auto;padding:0 16px}
+h1{margin:0;font-size:clamp(1.35rem,4.5vw,2rem);line-height:1.25;display:flex;align-items:center;gap:12px}
+h1 i{flex:none;width:.8em;height:.8em;border-radius:50%;background:var(--r)}
+header p{margin:4px 0 0;opacity:.85}
+.note{background:var(--wn);color:var(--wt);padding:10px 14px;border-radius:6px;margin:16px 0;font-size:.93rem}
+.bar{display:flex;gap:10px;flex-wrap:wrap}
+input,select,textarea{font:inherit;color:var(--tx);background:var(--sf);border:1px solid var(--bd);border-radius:6px;padding:9px 12px;width:100%}
+.bar input{flex:2 1 260px;width:auto}.bar select{flex:1 1 220px;width:auto}
+:focus-visible{outline:2px solid var(--g);outline-offset:2px}
+.mu{color:var(--mu)}
+#n{margin:12px 0 4px;font-size:.93rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px;padding-bottom:40px}
+.grid h3{grid-column:1/-1;margin:18px 0 2px;font-size:1.05rem;color:var(--g);border-bottom:1px solid var(--bd);padding-bottom:4px}
+.card{font:inherit;color:var(--tx);text-align:left;background:var(--sf);border:1px solid var(--bd);border-left:4px solid var(--g);border-radius:6px;padding:9px 12px;cursor:pointer;position:relative}
+.card:hover{background:var(--gs)}
+.card.e::after{content:"";position:absolute;top:8px;right:8px;width:8px;height:8px;border-radius:50%;background:var(--r)}
+#m{position:fixed;inset:0;background:rgba(0,0,0,.55);overflow:auto;z-index:20;padding:calc(12px + env(safe-area-inset-top,0px)) 12px calc(12px + env(safe-area-inset-bottom,0px))}
+#m[hidden]{display:none}
+.pn{background:var(--sf);max-width:720px;margin:0 auto;border-radius:8px;padding:20px;position:relative}
+.pn h2{margin:2px 0 8px;font-size:1.35rem;line-height:1.3;padding-right:60px}
+.pn h3{margin:18px 0 4px;font-size:.98rem;color:var(--g)}
+.pn p,.pn ol{margin:0}.pn ol{padding-left:22px}.pn li{margin:2px 0}
+.pn a{color:var(--g);word-break:break-all}
+.pn label{display:block;margin-top:12px;font-weight:600;font-size:.93rem}
+.pn textarea{margin-top:4px;resize:vertical;font-weight:400}
+.x{position:absolute;top:14px;right:14px}
+.row{display:flex;gap:8px;margin-top:20px;flex-wrap:wrap}
+.b,.x{font:inherit;cursor:pointer;border-radius:6px;border:1px solid var(--g);background:var(--g);color:var(--on);padding:6px 16px}
+.b.o,.x{background:transparent;color:var(--g)}
+</style>
+</head>
+<body>
+<header><div class="w"><h1><i></i>TanimXploit Digital Service Center</h1><p>Complete Service Directory &amp; Operator Guide</p></div></header>
+<main class="w">
+<p class="note">সরকারি ফি, আবেদনকাল ও ডকুমেন্টের নিয়ম বদলাতে পারে, তাই ফি ও Deadline ঘরে নির্দিষ্ট অঙ্ক বসানো নেই। অফিসিয়াল সাইট থেকে যাচাই করে Edit বাটনে নিজে লিখে রাখুন। গ্রাহকের পাসওয়ার্ড, PIN বা OTP কখনো সংরক্ষণ করবেন না। এডিট এই ডিভাইসের ব্রাউজারে সেভ হয় (লাল বিন্দু = এডিট করা সার্ভিস)।</p>
+<div class="bar"><input id="q" type="search" placeholder="সার্ভিসের নাম বা keyword দিয়ে খুঁজুন" aria-label="Search"><select id="c" aria-label="Category"></select></div>
+<p id="n" class="mu"></p>
+<div id="l" class="grid"></div>
+</main>
+<div id="m" hidden><div class="pn" role="dialog" aria-modal="true" id="d"></div></div>
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const T={
+A:{s:"গ্রাহকের চাহিদা ও পরিচয় নিশ্চিত করুন|প্রয়োজনীয় কাগজ ও তথ্য সংগ্রহ করে স্ক্যান করুন|অফিসিয়াল সাইটে ফর্ম পূরণ করুন|প্রিভিউতে গ্রাহকের সাথে সব তথ্য মিলিয়ে নিন|ফি বা পেমেন্ট (প্রযোজ্য হলে) সম্পন্ন করুন|সাবমিট করে রিসিপ্ট ও ট্র্যাকিং নম্বর প্রিন্ট করে দিন|স্ট্যাটাস চেক ও পরবর্তী ধাপ গ্রাহককে জানান",
+f:"অফিসিয়াল সাইট বা বিজ্ঞপ্তি থেকে যাচাই করে লিখুন",
+t:"OTP না এলে নম্বর ও নেটওয়ার্ক যাচাই করুন; ফাইলের সাইজ বা ফরম্যাটে সমস্যা হলে Resize/Compress করুন; সাইট ধীর হলে অফ-পিক সময়ে আবার চেষ্টা করুন; তথ্য না মিললে মূল কাগজ দেখে ঠিক করুন।"},
+B:{s:"গ্রাহকের চাহিদা, সাইজ ও পরিমাণ জেনে নিন|গ্রাহকের ফাইল বা অরিজিনাল কপি নিন|কাজ সম্পন্ন করুন|প্রিভিউ বা প্রুফ গ্রাহককে দেখান|সংশোধন শেষে ফাইনাল প্রিন্ট বা ফাইল দিন|চার্জ বুঝে নিন এবং গ্রাহকের ফাইল মুছে ফেলুন",
+f:"প্রযোজ্য নয়",d:"কাজের পরিমাণ অনুযায়ী — আপনার সময় লিখুন",
+t:"প্রিন্টে রং বা মার্জিন ঠিক না এলে প্রিভিউ দেখে সেটিংস বদলান; ফন্ট ভেঙে গেলে PDF করে প্রিন্ট দিন; ফাইল বড় হলে Compress করুন।"},
+C:{s:"বিল বা রেফারেন্স নম্বর নিন|প্রতিষ্ঠানের সাইট বা অ্যাপে নাম ও অঙ্ক যাচাই করুন|গ্রাহকের টাকা বুঝে নিয়ে পেমেন্ট করুন|রসিদ ও ট্রানজেকশন আইডি প্রিন্ট করে দিন",
+f:"বিলে বা অফিসিয়াল সাইটে দেখানো অঙ্ক — যাচাই করে লিখুন",d:"সাধারণত তাৎক্ষণিক — পেমেন্ট গেটওয়ে অনুযায়ী যাচাই করুন",
+t:"পেমেন্ট ফেল হলে ব্যালেন্স ও নেটওয়ার্ক দেখুন এবং আবার দেওয়ার আগে স্ট্যাটাস যাচাই করুন; টাকা কেটে গেলে ট্রানজেকশন আইডি দিয়ে সংশ্লিষ্ট অফিসে জানান।"},
+D:{s:"গ্রাহকের চাহিদা বুঝে নিন|গ্রাহকের সামনে ও অনুমতি নিয়ে কাজ শুরু করুন|ধাপে ধাপে সেটআপ বা ফর্ম পূরণ করুন (OTP, PIN ও পাসওয়ার্ড গ্রাহক নিজে দেবেন)|কাজ ঠিক হয়েছে কি না গ্রাহককে দেখিয়ে দিন|পাসওয়ার্ড ও রিকভারি তথ্য গ্রাহককে বুঝিয়ে দিন",
+f:"সাধারণত প্রযোজ্য নয় — প্রতিষ্ঠানের নিয়ম যাচাই করুন",d:"কাজের ধরন অনুযায়ী — আপনার সময় লিখুন",
+t:"লগইন বা OTP সমস্যায় গ্রাহকের নম্বর ও নেটওয়ার্ক যাচাই করুন; সেটআপ আটকে গেলে অ্যাপ বা ব্রাউজার আপডেট করে আবার চেষ্টা করুন; রিকভারি অপশন গ্রাহকের তথ্য দিয়েই সেট করুন।"},
+E:{s:"যাত্রা বা ইভেন্টের তারিখ, গন্তব্য ও যাত্রী সংখ্যা জেনে নিন|যাত্রীর নাম NID বা পাসপোর্ট অনুযায়ী নিন|অপশন দেখিয়ে গ্রাহকের পছন্দ নিন|পেমেন্ট করে টিকিট বা কনফার্মেশন নিন|প্রিন্ট বা শেয়ার করুন এবং ক্যানসেল ও রিফান্ডের নিয়ম জানান",
+f:"টিকিট বা বুকিং ভাড়া — প্ল্যাটফর্মে যাচাই করে লিখুন",d:"যাত্রা বা ইভেন্টের তারিখের আগে — প্ল্যাটফর্মে যাচাই করুন",
+t:"সিট বা স্লট শেষ হলে বিকল্প সময় দেখুন; পেমেন্ট ফেল হলে ট্রানজেকশন যাচাই করে আবার করুন; ক্যানসেল ও রিফান্ডের শর্ত বুকিংয়ের আগেই গ্রাহককে জানান।"}
+};
+const C=[
+["সরকারি অনলাইন সেবা","A","https://www.bangladesh.gov.bd","NID বা জন্মসনদ, মোবাইল নম্বর, ইমেইল, ছবি ও স্বাক্ষর, সংশ্লিষ্ট সনদ (সেবাভেদে ভিন্ন)","NID Card Registration Application|NID Information Correction Application|NID Reissue / Duplicate Application|NID Download / Online Copy|Birth Certificate Registration|Birth Certificate Correction|Birth Certificate Online Verification|Death Registration|Death Certificate Correction|Death Record Verification|Online Marriage Registration Assistance|Registered Marriage Registrar / Kazi Search|Marriage Certificate / Nikahnama Download Assistance|e-Passport Application|Passport Renewal Application|Passport Information Correction|Passport Appointment Assistance|Police Clearance Certificate Application|E-TIN Registration|E-TIN Certificate Download|Income Tax Return Preparation & Submission Assistance|Trade License Application / Renewal Assistance|Driving License Application|Driving License Renewal|Vehicle Tax Token / Fitness Information|Online Khatian / e-Porcha|Khatian / Porcha Download|Land Tax Payment Assistance|Mutation Application Assistance|Government Certificate Download|Citizen Service Application|সরকারি অভিযোগ / GRS Submission|Freedom Fighter Information Search|বয়স্ক, বিধবা, প্রতিবন্ধী ও অন্যান্য সামাজিক নিরাপত্তা কর্মসূচির আবেদন|মা ও শিশু সহায়তা, মাতৃত্বকালীন সহায়তা এবং VWB কর্মসূচির তথ্য ও সেবা"],
+["চাকরি ও ক্যারিয়ার সংক্রান্ত সেবা","A","","CV, NID, শিক্ষাসনদ, ছবি ও স্বাক্ষর (নির্ধারিত সাইজে), মোবাইল নম্বর","Government Job Application|BCS Application|Primary Teacher Application|NTRCA Application|Bank Job Application|Police Job Application|Army Job Application|Navy Job Application|Air Force Job Application|Railway Job Application|BPSC Application|Private Company Job Application|Garments Job Application|NGO Job Application|Online CV Submission|Professional CV Making|Resume Design|Cover Letter Writing|Job Portal Account Creation|Bdjobs Profile Setup|LinkedIn Profile Setup|Admit Card Download|Job Application Payment Assistance|Job Result Check|Interview Call Letter Download"],
+["শিক্ষা সংক্রান্ত সেবা","A","","আগের মার্কশিট বা সনদ, ছবি ও স্বাক্ষর, NID বা জন্মসনদ, অভিভাবকের তথ্য, মোবাইল নম্বর","School Admission Application|College Admission Application|University Admission Application|National University Admission|Honours Admission|Degree Admission|Masters Admission|Medical Admission|Engineering Admission|Polytechnic Admission|Madrasa Admission|SSC Registration Assistance|HSC Registration Assistance|Exam Form Fill-up|Exam Result Check|Marksheet Download|Certificate Download|Board Challenge Application|Scholarship Application|Stipend Application Assistance|School / College Transfer Application|Migration Certificate Application|Testimonial Application|Online Assignment Preparation|Educational Document Typing|Thesis / Project Formatting|PowerPoint Presentation Design"],
+["বিদেশগমন ও ভিসা সংক্রান্ত সেবা","A","","পাসপোর্ট, ছবি, NID, ব্যাংক স্টেটমেন্ট বা আমন্ত্রণপত্র (ভিসাভেদে), ইমেইল ও মোবাইল","Online Visa Application Assistance|Visa Appointment Booking|Visa Form Fill-up|Tourist Visa Application Assistance|Student Visa Application Assistance|Work Visa Application Assistance|Medical Visa Application Assistance|Air Ticket Booking Assistance|Flight Schedule Check|Hotel Booking Assistance|Travel Insurance Application Assistance|BMET Registration Assistance|Overseas Employment Registration|BOESL Job Application|Work Permit Application Assistance|Immigration Document Scanning|Passport-size Photo Preparation|Document Translation Typing|Police Clearance for Abroad|বিদেশগামী কর্মীদের প্রয়োজনীয় অনলাইন আবেদন সহায়তা"],
+["ব্যাংকিং ও আর্থিক সেবা","A","","NID, ছবি, স্বাক্ষর, নমিনির তথ্য, মোবাইল নম্বর, TIN (প্রয়োজনে)","Bank Account Opening Form Assistance|Online Bank Account Application|Mobile Banking Account Opening Assistance|bKash Account Registration Assistance|Nagad Account Registration Assistance|Rocket Account Registration Assistance|Upay Account Registration Assistance|Mobile Banking PIN Reset Guidance|Bank Statement Download (authorized access)|Bank Transaction History Print|Online Bank Fund Transfer Guidance|Credit Card Application Assistance|Debit Card Application Assistance|Loan Application Assistance|DPS / FDR Information & Application Assistance|Savings Certificate Information|Universal Pension Scheme Registration|Government Treasury Challan Payment|A-Challan Generation|Online Payment Assistance|Insurance Application Assistance|Insurance Premium Payment|Tax Payment Assistance|VAT Registration Information|VAT Return Preparation Assistance"],
+["মোবাইল ও টেলিকম সেবা","D","","NID, নিবন্ধিত মোবাইল নম্বর, গ্রাহকের নিজের ডিভাইস ও অনুমতি","SIM Registration Information|SIM Ownership Verification Guidance|SIM Replacement Application Guidance|SIM Lost Complaint Guidance|Mobile Number Portability (MNP) Information|Mobile Recharge|Internet Package Activation Assistance|Mobile Banking App Installation|Smartphone Software Update|Email Account Creation|Gmail Account Recovery Guidance|Facebook Account Creation|Facebook Page Creation|WhatsApp Setup|Telegram Setup|Google Account Setup|Google Drive Setup|Google Photos Backup Guidance|Smartphone Data Transfer|Mobile Application Installation"],
+["প্রিন্টিং ও ডকুমেন্ট সেবা","B","","গ্রাহকের ফাইল বা অরিজিনাল কপি, কাজের নির্দেশনা (সাইজ, কপির সংখ্যা)","Black & White Printing|Color Printing|Photocopy|Scanning|PDF Creation|PDF Editing|PDF Merge|PDF Split|PDF Compression|PDF to Word Conversion|Word to PDF Conversion|Image to PDF Conversion|PDF to Image Conversion|Document Typing (Bangla & English)|বাংলা আবেদনপত্র টাইপিং|দরখাস্ত লেখা|অফিসিয়াল চিঠি তৈরি|Agreement Typing|Affidavit Typing|Biodata Making|CV / Resume Design|Passport Size Photo|Visa Size Photo|Photo Background Removal|Photo Resize|Signature Resize|Document Formatting|Table / Excel Data Entry|Lamination|Spiral Binding|ID Card Printing|Visiting Card Printing|Letterhead Design|Envelope Design|Certificate Design"],
+["ছবি ও গ্রাফিক ডিজাইন","B","","গ্রাহকের ছবি, লোগো ও লেখা, রেফারেন্স ডিজাইন, সাইজ ও রঙের পছন্দ","Passport Photo Editing|Professional Photo Retouching|Background Removal|Photo Restoration|Photo Color Correction|Photo Enhancement|Wedding Photo Editing|Product Photo Editing|Logo Design|Business Card Design|Banner Design|Poster Design|Facebook Cover Design|Facebook Post Design|YouTube Thumbnail Design|YouTube Channel Art|Social Media Creative Design|Invitation Card Design|Wedding Card Design|Restaurant Menu Design|Product Catalogue Design|Company Profile Design|Certificate Design|ID Card Design|Flyer Design|Brochure Design|Packaging Design|T-shirt Design"],
+["কম্পিউটার ও ইন্টারনেট সেবা","D","","গ্রাহকের ফাইল, ইমেইল বা ডিভাইসে প্রবেশের অনুমতি","Internet Browsing|Email Sending|Email Receiving|Online Form Fill-up|Online Account Registration|Website Registration Assistance|File Download|File Upload|Online Document Submission|Google Search Assistance|Online Meeting Setup|Zoom Meeting Assistance|Google Meet Setup|Microsoft Teams Setup|Cloud Storage Setup|Online File Sharing|Software Installation|Windows Installation|Windows Activation (Genuine License)|Antivirus Installation|Computer Troubleshooting|Printer Setup|Scanner Setup|Wi-Fi Configuration|Router Configuration|Data Backup|Data Recovery (where technically possible)|Computer Maintenance"],
+["ব্যবসা ও কোম্পানি সংক্রান্ত সেবা","A","","NID, TIN, ব্যবসার নাম ও ঠিকানা, ছবি, ভাড়ার চুক্তি বা মালিকানার কাগজ (সেবাভেদে)","Trade License Application Assistance|Trade License Renewal|e-TIN Registration|BIN / VAT Registration Assistance|Company Registration Information|RJSC Registration Assistance|Partnership Deed Typing|Business Bank Account Application|Business Profile Creation|Company Profile Design|Business Proposal Writing|Business Letter Preparation|Invoice Design|Money Receipt Design|Quotation Preparation|Purchase Order Preparation|Sales Report Preparation|Excel Accounting Sheet|Employee Salary Sheet|Payroll Sheet|Attendance Sheet|Stock Management Sheet|Inventory Data Entry|Customer Database Management|Product Data Entry|E-commerce Product Upload|Facebook Business Page Setup|Google Business Profile Setup|Website Domain Registration Assistance|Website Hosting Setup Assistance"],
+["ইউটিলিটি বিল ও সরকারি পেমেন্ট","C","","বিল বা কাস্টমার নম্বর, মিটার বা রেফারেন্স নম্বর, মোবাইল নম্বর","Electricity Bill Payment|DESCO Bill Payment|DPDC Bill Payment|BREB / Palli Bidyut Bill Payment|BPDB Bill Payment|Gas Bill Payment|WASA Bill Payment|Water Bill Payment|Internet Bill Payment|Telephone Bill Payment|TV / Cable Subscription Payment|Government Fee Payment|Exam Application Fee Payment|Admission Fee Payment|Passport Fee Payment|Driving License Fee Payment|Land Tax Payment|Treasury Challan Payment"],
+["কুরিয়ার ও অনলাইন কেনাকাটা","D","","মোবাইল নম্বর, ঠিকানা, পণ্যের তথ্য, অর্ডার বা ট্র্যাকিং নম্বর","Courier Parcel Booking Assistance|Courier Tracking|Pathao Courier Booking|Steadfast Courier Booking|RedX Courier Booking|Sundarban Courier Booking|SA Paribahan Booking Assistance|Online Shopping Assistance|Daraz Order Placement Assistance|Product Price Comparison|Online Order Tracking|Return / Refund Request Assistance|E-commerce Seller Account Setup|Seller Product Upload|Product Listing Optimization|Product Image Editing|Order Management Assistance|Delivery Charge Calculation|Customer Information Entry|Online Store Management Assistance"],
+["কৃষি ও গ্রামীণ সেবা","A","https://www.dae.gov.bd","NID, জমির কাগজ বা খতিয়ান, মোবাইল নম্বর, ব্যাংক বা মোবাইল ব্যাংকের তথ্য","কৃষক নিবন্ধন সহায়তা|কৃষি কার্ড সংক্রান্ত আবেদন সহায়তা|কৃষি ভর্তুকির আবেদন সহায়তা|কৃষি প্রণোদনা আবেদন|কৃষি ঋণ আবেদন সহায়তা|কৃষি প্রশিক্ষণ নিবন্ধন|মৎস্য চাষ প্রশিক্ষণ আবেদন|প্রাণিসম্পদ সেবা সংক্রান্ত আবেদন|কৃষি তথ্য ডাউনলোড|কৃষি পণ্যের বাজারদর অনুসন্ধান|কৃষি প্রকল্পের অনলাইন আবেদন|কৃষি যন্ত্রপাতি ভর্তুকির তথ্য"],
+["সামাজিক নিরাপত্তা ও ভাতা","A","https://www.dss.gov.bd","NID, জন্মতারিখ, ইউনিয়ন বা ওয়ার্ডের তথ্য, ছবি, মোবাইল ব্যাংক বা ব্যাংক হিসাব","বয়স্ক ভাতা আবেদন|বিধবা ভাতা আবেদন|প্রতিবন্ধী ভাতা আবেদন|প্রতিবন্ধী পরিচয়পত্র সংক্রান্ত সহায়তা|মাতৃত্বকালীন ভাতা আবেদন|মা ও শিশু সহায়তা কর্মসূচির আবেদন|শিক্ষা উপবৃত্তি আবেদন|মুক্তিযোদ্ধা ভাতা সংক্রান্ত তথ্য|VWB / খাদ্য সহায়তা কর্মসূচি|সরকারি সামাজিক নিরাপত্তা কর্মসূচির আবেদন|ভাতার আবেদন স্ট্যাটাস চেক|সরকারি সুবিধাভোগীর তথ্য যাচাইয়ের নির্দেশনা"],
+["আইন, সার্টিফিকেট ও স্থানীয় প্রশাসনিক সেবা","A","https://www.bangladesh.gov.bd","NID, চেয়ারম্যান বা কাউন্সিলরের প্রত্যয়ন, ছবি, ঠিকানার প্রমাণ (সেবাভেদে)","নাগরিকত্ব সনদ আবেদন|চারিত্রিক সনদ আবেদন|ওয়ারিশ সনদ আবেদন|উত্তরাধিকার সনদ সংক্রান্ত সহায়তা|পারিবারিক সনদ আবেদন|স্থায়ী বাসিন্দা সনদ আবেদন|অবিবাহিত সনদ আবেদন|বিবাহিত সনদ আবেদন|বিধবা সনদ আবেদন|আয় সনদ আবেদন|বেকারত্ব সনদ আবেদন|ভূমিহীন সনদ আবেদন|কৃষি সনদ আবেদন|প্রতিবন্ধী সনদ সংক্রান্ত সহায়তা|স্থানীয় সরকার প্রতিষ্ঠানের বিভিন্ন প্রত্যয়নপত্র|সরকারি অভিযোগ জমা দেওয়ার সহায়তা|অনলাইন জিডি আবেদন সহায়তা|পুলিশ ক্লিয়ারেন্স আবেদন সহায়তা"],
+["অন্যান্য বিশেষায়িত সেবা","D","","NID, ছবি, ইমেইল, মোবাইল নম্বর, পোর্টফোলিও বা শিক্ষাগত তথ্য","Freelancing Account Setup Assistance|Fiverr Account Profile Setup|Freelancer.com Profile Setup|Upwork Profile Setup|LinkedIn Profile Creation|Portfolio Website Creation|Domain & Hosting Setup|WordPress Website Setup|E-commerce Website Setup|YouTube Channel Creation|YouTube Channel Optimization|Facebook Monetization Guidance|YouTube Monetization Guidance|Google AdSense Application Guidance|Online Course Registration|IELTS / Language Test Registration Assistance|Online Training Registration|Scholarship Abroad Application Assistance|Research Paper Formatting|Online Conference Registration"],
+["পরীক্ষা, ভর্তি ও রেজাল্ট সংক্রান্ত অতিরিক্ত সেবা","A","","রোল ও রেজিস্ট্রেশন নম্বর, বোর্ড বা বিশ্ববিদ্যালয়, পরীক্ষার সাল","SSC Result Check|HSC Result Check|JSC / Equivalent Historical Result Search|Dakhil Result Check|Alim Result Check|Diploma Result Check|University Semester Result Check|National University Result Check|School Admission Lottery Result|College Admission Result|University Admission Result|Exam Routine Download|Exam Seat Plan Download|Registration Card Download|Admit Card Print|Academic Transcript Formatting|Online Certificate Verification"],
+["স্বাস্থ্য ও চিকিৎসা সংক্রান্ত অনলাইন সেবা","A","https://www.dghs.gov.bd","NID বা জন্মসনদ, মোবাইল নম্বর, আগের রিপোর্ট বা রেফারেন্স নম্বর","Hospital Appointment Booking Assistance|Doctor Appointment Booking|Diagnostic Test Appointment|Online Hospital Registration|Medical Report Download (authorized access)|Medical Report Printing|Health Insurance Application Assistance|Medical Visa Documentation|Telemedicine Appointment Assistance|Online Health Service Registration|Government Hospital Information Search|Ambulance Service Information Search"],
+["টিকিট ও বুকিং সেবা","E","","যাত্রীর NID বা পাসপোর্ট, মোবাইল নম্বর, যাত্রার তারিখ ও গন্তব্য","Online Bus Ticket Booking|Train Ticket Booking|Air Ticket Booking|Launch Ticket Booking|Event Ticket Booking|Hotel Reservation Assistance|Tourist Spot Booking Assistance|Online Travel Package Booking|Ticket Cancellation Guidance|Ticket Refund Request Assistance"]
+];
+const R=[
+[/NID/,"https://services.nidw.gov.bd"],[/Birth|Death/,"https://bdris.gov.bd"],
+[/e-Passport|Passport (Renewal|Information|Appointment|Fee)/,"https://www.epassport.gov.bd"],
+[/Police Clearance|পুলিশ ক্লিয়ারেন্স/,"https://pcc.police.gov.bd"],[/জিডি/,"https://www.police.gov.bd"],
+[/TIN/,"https://secure.incometax.gov.bd"],[/Land Tax/,"https://ldtax.gov.bd"],[/Khatian|Porcha/,"https://eporcha.gov.bd"],
+[/Mutation/,"https://mutation.land.gov.bd"],[/Driving|Vehicle/,"https://bsp.brta.gov.bd"],
+[/GRS|অভিযোগ/,"https://www.grs.gov.bd"],[/BPSC|BCS/,"https://www.bpsc.gov.bd"],[/NTRCA/,"https://ntrca.gov.bd"],
+[/Police Job/,"https://police.teletalk.com.bd"],
+[/Government Job|Primary Teacher|Railway Job|Admit Card Download|Interview Call Letter|Job Result/,"https://alljobs.teletalk.com.bd"],
+[/Bdjobs/,"https://www.bdjobs.com"],[/LinkedIn/,"https://www.linkedin.com"],[/Upwork/,"https://www.upwork.com"],
+[/Fiverr/,"https://www.fiverr.com"],[/Freelancer\.com/,"https://www.freelancer.com"],
+[/School Admission/,"https://gsa.teletalk.com.bd"],[/College Admission/,"https://xiclassadmission.gov.bd"],
+[/National University|Honours|Degree Admission|Masters Admission/,"https://www.nu.ac.bd"],
+[/SSC Result|HSC Result|JSC|Dakhil Result|Alim Result|Diploma Result|Marksheet|Board Challenge|Exam Result Check/,"https://eboardresults.com"],
+[/BMET|Overseas Employment/,"https://www.bmet.gov.bd"],[/BOESL/,"https://www.boesl.gov.bd"],
+[/Universal Pension/,"https://www.upension.gov.bd"],[/Savings Certificate/,"https://www.nsd.gov.bd"],
+[/bKash/,"https://www.bkash.com"],[/Nagad/,"https://nagad.com.bd"],[/Rocket/,"https://www.dutchbanglabank.com"],[/Upay/,"https://www.upaybd.com"],
+[/RJSC|Company Registration|Partnership/,"https://www.roc.gov.bd"],[/VAT|BIN/,"https://vat.gov.bd"],
+[/Income Tax|Tax Payment/,"https://etaxnbr.gov.bd"],
+[/DESCO/,"https://www.desco.org.bd"],[/DPDC/,"https://www.dpdc.org.bd"],[/BREB/,"https://www.reb.gov.bd"],[/WASA/,"https://dwasa.org.bd"],
+[/Train Ticket/,"https://eticket.railway.gov.bd"],
+[/Pathao/,"https://pathao.com"],[/Steadfast/,"https://steadfast.com.bd"],[/RedX/,"https://redx.com.bd"],
+[/Sundarban/,"https://www.sundarbancourier.com"],[/Daraz/,"https://www.daraz.com.bd"],
+[/AdSense/,"https://adsense.google.com"],[/Gmail|Google Account/,"https://accounts.google.com"],[/Google Drive/,"https://drive.google.com"],
+[/বাজারদর/,"https://dam.gov.bd"]
+];
+let E={},cur=null;
+try{E=JSON.parse(localStorage.getItem("tdsc")||"{}")}catch(e){}
+const save=()=>{try{localStorage.setItem("tdsc",JSON.stringify(E))}catch(e){}};
+const S=[];
+C.forEach((c,ci)=>c[4].split("|").forEach((n,i)=>{const r=R.find(x=>x[0].test(n)),t=T[c[1]];
+S.push({id:ci+"-"+i,ci,b:{n,steps:t.s.replace(/\|/g,"\n"),link:r?r[1]:c[2],docs:c[3],gfee:t.f,chg:"আপনার সার্ভিস চার্জ এখানে লিখুন",dl:(ci==1||ci==2)?"বিজ্ঞপ্তি বা সার্কুলারের শেষ তারিখ যাচাই করে লিখুন":(t.d||"প্রসেসিং টাইম অফিসিয়াল সাইটে যাচাই করে লিখুন"),tr:t.t}})}));
+const get=(s,k)=>(E[s.id]&&E[s.id][k]!==undefined)?E[s.id][k]:s.b[k];
+const F=[["n","সার্ভিসের নাম"],["steps","How to Process (প্রতি লাইনে একটি ধাপ)"],["link","Direct Apply Link"],["docs","Required Documents"],["gfee","Government Fee"],["chg","Customer Charge"],["dl","Deadline / Processing Time"],["tr","Troubleshooting"]];
+function render(){
+const q=$("q").value.trim().toLowerCase(),c=$("c").value;
+const L=S.filter(s=>(c===""||s.ci==c)&&(!q||(get(s,"n")+" "+C[s.ci][0]+" "+get(s,"docs")+" "+get(s,"steps")).toLowerCase().includes(q)));
+$("n").textContent=L.length.toLocaleString("bn-BD")+" টি সার্ভিস";
+let h="",last=-1;
+L.forEach(s=>{if(s.ci!==last){h+=`<h3>${esc(C[s.ci][0])}</h3>`;last=s.ci}
+h+=`<button class="card${E[s.id]?" e":""}" data-id="${s.id}">${esc(get(s,"n"))}</button>`});
+$("l").innerHTML=h||'<p class="mu">কিছু পাওয়া যায়নি — অন্য keyword বা ক্যাটাগরি চেষ্টা করুন।</p>'}
+function show(s){cur=s;const g=k=>get(s,k),l=g("link");
+$("d").innerHTML=`<button class="x" id="cl">বন্ধ</button><span class="mu">${esc(C[s.ci][0])}</span><h2>${esc(g("n"))}</h2>
+<h3>How to Process</h3><ol>${g("steps").split("\n").filter(Boolean).map(x=>`<li>${esc(x)}</li>`).join("")}</ol>
+<h3>Direct Apply Link</h3><p>${/^https?:\/\//.test(l)?`<a href="${esc(l)}" target="_blank" rel="noopener noreferrer">${esc(l)}</a><br><span class="mu">ব্যবহারের আগে লিংকটি অফিসিয়াল কি না যাচাই করে নিন।</span>`:'<span class="mu">লিংক যোগ করা হয়নি — Edit করে দিন।</span>'}</p>
+${[["docs","Required Documents"],["gfee","Government Fee"],["chg","Customer Charge"],["dl","Deadline / Processing Time"],["tr","Troubleshooting"]].map(([k,t])=>`<h3>${t}</h3><p>${esc(g(k))}</p>`).join("")}
+<div class="row"><button class="b" id="ed">Edit</button></div>`;
+$("m").hidden=false;document.body.style.overflow="hidden";$("m").scrollTop=0}
+function edit(s){$("d").innerHTML=`<h2>Edit service</h2>`+F.map(([k,t])=>`<label>${t}<textarea id="f_${k}" rows="${k=="steps"?6:(k=="n"||k=="link")?1:3}">${esc(get(s,k))}</textarea></label>`).join("")+`<div class="row"><button class="b" id="sv">Save changes</button><button class="b o" id="rs">Reset to default</button><button class="b o" id="cn">Cancel</button></div>`;$("m").scrollTop=0}
+function close(){$("m").hidden=true;document.body.style.overflow=""}
+$("d").onclick=e=>{const i=e.target.id;
+if(i=="cl")close();else if(i=="ed")edit(cur);else if(i=="cn")show(cur);
+else if(i=="sv"){E[cur.id]={};F.forEach(([k])=>{E[cur.id][k]=$("f_"+k).value.trim()});save();render();show(cur)}
+else if(i=="rs"){delete E[cur.id];save();render();show(cur)}};
+$("m").onclick=e=>{if(e.target.id=="m")close()};
+document.onkeydown=e=>{if(e.key=="Escape"&&!$("m").hidden)close()};
+$("l").onclick=e=>{const b=e.target.closest(".card");if(b)show(S.find(s=>s.id==b.dataset.id))};
+$("q").oninput=render;$("c").onchange=render;
+$("c").innerHTML='<option value="">সব ক্যাটাগরি ('+S.length.toLocaleString("bn-BD")+')</option>'+C.map((c,i)=>`<option value="${i}">${esc(c[0])}</option>`).join("");
+render();
+</script>
+</body>
+</html>
